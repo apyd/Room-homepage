@@ -1,7 +1,40 @@
-body {
+.body {
     font-family: 'Spartan', sans-serif;
     --dark-gray: hsl(0, 0%, 63%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
-    --very-dark-grey: hsl(0, 0%, 27%)
+    --very-dark-grey: hsl(0, 0%, 27%);
+    font-size: 12px;
+}
+
+.header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo__link {
+   display: flex;
+   margin-right: 20px;
+}
+
+.nav__list {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav__item {
+    padding-right: 30px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: lowercase;
 }
