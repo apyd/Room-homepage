@@ -51,7 +51,20 @@
     color: var(--white);
     text-transform: lowercase;
     font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
     }
+
+.nav__link:hover.nav__link::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 2px;
+    background-color: white;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .main {
     display: flex;
@@ -91,11 +104,17 @@
     font-size: .7rem;
 }
 
+.slider__link:hover {
+    color: var(--dark-gray);
+}
+
+.slider__link:hover .link__icon {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(14%) saturate(0%) hue-rotate(147deg) brightness(90%) contrast(79%);
+}
+
 .link__icon {
     padding-left: 20px;
 }
-
-
 .wrapper--btns {
     display: flex;
     position: absolute;
@@ -105,14 +124,20 @@
     background-color: var(--black);
     padding: 30px;
     border: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.btn:hover {
+    background-color: var(--very-dark-grey);
 }
 
 .btn--left {
-    background: url('./../icons/icon-angle-left.svg') var(--black) center center no-repeat;
+    background-image: url('./../icons/icon-angle-left.svg');
 }
 
 .btn--right {
-    background: url('./../icons/icon-angle-right.svg') var(--black) center center no-repeat;
+    background-image: url('./../icons/icon-angle-right.svg');
 }
 
 .section-about {
