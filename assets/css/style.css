@@ -95,13 +95,20 @@
 
 .slider__link {
     display: flex;
-    margin-top: 25px;
+    align-items: center;
     text-decoration: none;
     color: var(--black);
     text-transform: uppercase;
     letter-spacing: 8px;
-    font-weight: bold;
-    font-size: .7rem;
+    margin-top: 30px;
+    }
+
+.link__text {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    height: 11px;
+    padding-right: 25px;
 }
 
 .slider__link:hover {
@@ -110,10 +117,6 @@
 
 .slider__link:hover .link__icon {
     filter: brightness(0) saturate(100%) invert(72%) sepia(14%) saturate(0%) hue-rotate(147deg) brightness(90%) contrast(79%);
-}
-
-.link__icon {
-    padding-left: 20px;
 }
 .wrapper--btns {
     display: flex;
