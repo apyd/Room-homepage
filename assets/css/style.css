@@ -99,13 +99,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 80px;
+    padding: 0 60px;
     flex: 1;
 }
 
 .slider__header {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     margin: 0;
+    margin-bottom: 15px;
 }
 
 .text {
@@ -121,7 +122,7 @@
     color: var(--black);
     text-transform: uppercase;
     letter-spacing: 8px;
-    margin-top: 30px;
+    margin-top: 20px;
     }
 
 .link__text {
@@ -152,6 +153,7 @@
     border: none;
     background-position: center center;
     background-repeat: no-repeat;
+    margin: 0;
 }
 
 .btn:hover {
@@ -213,6 +215,7 @@
 @media (max-width: 767px) {
     .slider {
         flex-direction: column;
+        flex: 1;
     }
 
     .wrapper--slider-text {
@@ -221,50 +224,98 @@
 
     .section-about {
         flex-direction: column;
+        flex: 1;
+        }
+
+        .wrapper--img {
+            flex: 1;
     }
 
     .wrapper--btns {
         right: 0;
     }
+.wrapper--article {
+    flex: 1;
+}
 }
 
 @media (max-width: 425px) {
     .header {
         display: flex;
         margin: 0 auto;
-        top: 10px;
+        top: 0;
         left: 0;
         width: 100%;
+        padding: 30px;
     }
 
     .nav {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         flex: 1;
-        padding: 20px;
+        position: relative;
     }
 
     .nav__list {
         display: none;
     }
 
+    .nav__link {
+        color: black;
+    }
+
+    .logo--wrapper {
+        display: flex;
+    }
+
     .nav__btn {
-        display: inline-block;
+        display: block;
         background-color: transparent;
         padding: 0;
         margin: 0;
         border: none;
+        position: absolute;
+        left: 20px;
+        height: 100%;
+    }
+
+    .slider__header {
+        font-size: 1.6rem;
+    }
+
+    .article__header {
+        font-size: .9rem;
     }
 
     .btn {
         padding: 25px;
     }
 
-    .btn__icon {
+    .btn--burger {
         display: inline-block;
         background: url('./../icons/icon-hamburger.svg') no-repeat no-repeat center;
-        height: 24px;
-        width: 24px;
+        height: 14px;
+        width: 20px;
     }
-}
+
+    .nav__expanded {
+        background-color: white;
+        color: black;
+    }
+
+    .btn--close {
+        background: url('./../icons/icon-close.svg') no-repeat no-repeat center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: flex;
+    }
+    
+    .header--active {
+        background-color: white;
+    }
