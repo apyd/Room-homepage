@@ -30,6 +30,7 @@
 .nav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav__btn {
@@ -49,6 +50,7 @@
 
 .nav__item {
     margin-right: 30px;
+    position: relative;
 }
 
 .nav__link {
@@ -56,8 +58,6 @@
     color: var(--white);
     text-transform: lowercase;
     font-weight: bold;
-    position: relative;
-    padding-bottom: 10px;
     }
 
 .nav__link:hover.nav__link::after {
@@ -65,10 +65,10 @@
     content: '';
     width: 16px;
     height: 2px;
-    background-color: white;
-    bottom: 0%;
+    background-color: var(--white);
+    bottom: -50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 .main {
@@ -246,15 +246,16 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 30px;
+        padding: 10px;
     }
 
     .nav {
         display: flex;
-        align-items: stretch;
+        align-items: center;
         justify-content: center;
         flex: 1;
         position: relative;
+        padding: 20px 0;
     }
 
     .nav__list {
@@ -263,6 +264,10 @@
 
     .nav__link {
         color: black;
+    }
+
+    .nav__link:hover.nav__link::after {
+        background-color: var(--black);
     }
 
     .logo--wrapper {
@@ -277,7 +282,6 @@
         border: none;
         position: absolute;
         left: 20px;
-        height: 100%;
     }
 
     .slider__header {
@@ -300,7 +304,7 @@
     }
 
     .nav__expanded {
-        background-color: white;
+        background-color: var(--white);
         color: black;
     }
 
@@ -317,5 +321,5 @@
     }
     
     .header--active {
-        background-color: white;
+        background-color: var(--white);
     }
