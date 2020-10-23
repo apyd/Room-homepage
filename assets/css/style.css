@@ -88,6 +88,10 @@
     display: flex;
 }
 
+.slide--inactive {
+    display: none;
+}
+
 .wrapper--img {
         display: flex;
         flex: 2;
