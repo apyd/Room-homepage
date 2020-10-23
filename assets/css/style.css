@@ -85,11 +85,11 @@
 }
 
 .slide {
-    display: flex;
+    display: none;
 }
 
-.slide--inactive {
-    display: none;
+.slide--active {
+    display: flex;
 }
 
 .wrapper--img {

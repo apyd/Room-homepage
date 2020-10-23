@@ -8,9 +8,8 @@ let currentSlide = initialSlide;
 let numberOfSlides = slides.length - 1;
 
 function changeSlide(activeSlideIndex) {
-    console.log(activeSlideIndex);
     slides.forEach((slide, index) => {
-        index !== activeSlideIndex ? slides[index].classList.add('slide--inactive') : slides[index].classList.remove('slide--inactive');
+        index === activeSlideIndex ? slides[index].classList.add('slide--active') : slides[index].classList.remove('slide--active');
     })
 }
 
