@@ -100,7 +100,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 60px;
+    padding: 0 60px 70px 60px;
     flex: 1;
 }
 
@@ -200,7 +200,7 @@
     }
 
     .wrapper--slider-text {
-        padding: 0 40px;
+        padding: 0 40px 70px 40px;
     }
 
     .slider__header {
