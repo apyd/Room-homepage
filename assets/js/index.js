@@ -1,30 +1,39 @@
 const header= document.querySelector('.header');
-const navBurgerButton = document.querySelector('.btn--burger');
-const prevButton = document.querySelector('.btn--left');
-const nextButton = document.querySelector('.btn--right');
+const navBurgerBtn = document.querySelector('.btn--burger');
+const prevBtns = document.querySelectorAll('.btn--left');
+const nextBtns = document.querySelectorAll('.btn--right');
 const slides = document.querySelectorAll('.slide');
 let initialSlide = 0;
-let maxSlides = slides.length - 1;
+let currentSlide = initialSlide;
+let numberOfSlides = slides.length - 1;
+
+function changeSlide(activeSlideIndex) {
+    console.log(activeSlideIndex);
+    slides.forEach((slide, index) => {
+        index !== activeSlideIndex ? slides[index].classList.add('slide--inactive') : slides[index].classList.remove('slide--inactive');
+    })
+}
+
+document.addEventListener('DOMContentLoaded', changeSlide(initialSlide));
 
 window.addEventListener('scroll', () => {
     window.scrollY > 0 ? header.classList.add('header--half-transparent') : header.classList.remove('header--half-transparent');
-})
+});
 
-document.addEventListener('DOMContentLoaded', () => {
-    slides.forEach((slide, index) => {
-        index !== initialSlide ? slides[index].classList.add('slide--inactive') : null;
-    })
-})
-
-navBurgerButton.addEventListener('click', () => {
+navBurgerBtn.addEventListener('click', () => {
     header.classList.toggle('header--active');
 });
 
-prevButton.addEventListener('click', () => {
+prevBtns.forEach(prevBtn => {
+    prevBtn.addEventListener('click', () => {
+        currentSlide <= 0 ? currentSlide = numberOfSlides : --currentSlide;
+        changeSlide(currentSlide);
+    });
+});
 
-})
-
-nextButton.addEventListener('click', () => {
-
-})
-
+nextBtns.forEach(nextBtn => {
+    nextBtn.addEventListener('click', () => {
+        currentSlide >= numberOfSlides ? currentSlide = 0 : ++currentSlide;
+        changeSlide(currentSlide);
+    });
+});
