@@ -11,12 +11,15 @@
 
 .body {
     font-family: 'Spartan', sans-serif;
+    font-size: 16px;
     --dark-gray: hsl(0, 0%, 63%);
     --black: hsl(0, 0%, 0%);
     --black-transparent: hsla(0, 0%, 0%, .5);
     --white: hsl(0, 0%, 100%);
     --very-dark-grey: hsl(0, 0%, 27%);
-    font-size: 12px;
+    --h2-size: calc(1.125rem + (((100vw - 20rem) / (90 - 20))) * (2.25 - 1.125));
+    --h4-size: calc(1rem + (((100vw - 20rem) / (90 - 20))) * (1.2 - 1));
+    --paragraph-size: calc(.75rem + (((100vw - 20rem) / (90 - 20))) * (1.125 - .75));
     margin: 0;
     padding: 0;
 }
@@ -76,12 +79,14 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-height: 400px;
 }
 
 .slider {
     display: flex;
     position: relative;
     flex: 2;
+    max-height: 60vh;
 }
 
 .slide {
@@ -93,9 +98,9 @@
 }
 
 .wrapper--img {
-        display: flex;
-        flex: 2;
-        position: relative;
+    display: flex;
+    flex: 2;
+    position: relative;
 }
 
 .img {
@@ -113,15 +118,16 @@
 }
 
 .slider__header {
-    font-size: 2.1rem;
+    font-size: var(--h2-size);
     margin: 0;
     margin-bottom: 15px;
 }
 
 .text {
     color: var(--dark-gray);
+    font-size: var(--paragraph-size);
     margin: 0;
-    line-height: 1.1rem;
+    line-height: calc(1.1 * var(--paragraph-size));
 }
 
 .slider__link {
@@ -136,9 +142,7 @@
 
 .link__text {
     display: inline-block;
-    font-size: 12px;
-    line-height: 14px;
-    height: 11px;
+    font-size: var(--paragraph-size);
     padding-right: 25px;
 }
 
@@ -180,10 +184,8 @@
 
 .section-about {
     display: flex;
-}
-
-.section-about {
     flex: 1;
+    max-height: 40vh;
 }
 
 .wrapper--article {
@@ -197,6 +199,7 @@
 .article__header {
     text-transform: uppercase;
     letter-spacing: 5px;
+    font-size: var(--h4-size);
 }
 @media (max-width: 832px) {
     .logo__link {
@@ -212,7 +215,6 @@
     }
 
     .slider__header {
-        font-size: 1.8rem;
         margin-bottom: 10px;
     }
 
@@ -332,15 +334,6 @@
         position: absolute;
         left: 20px;
     }
-
-    .slider__header {
-        font-size: 1.6rem;
-    }
-
-    .article__header {
-        font-size: .9rem;
-    }
-
     .btn {
         padding: 25px;
     }
