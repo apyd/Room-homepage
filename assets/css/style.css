@@ -17,7 +17,7 @@
     --black-transparent: hsla(0, 0%, 0%, .5);
     --white: hsl(0, 0%, 100%);
     --very-dark-grey: hsl(0, 0%, 27%);
-    --h2-size: calc(1.125rem + (((100vw - 20rem) / (90 - 20))) * (2.25 - 1.125));
+    --h2-size: calc(1.5rem + (((100vw - 20rem) / (90 - 20))) * (2.25 - 1.5));
     --h4-size: calc(1rem + (((100vw - 20rem) / (90 - 20))) * (1.2 - 1));
     --paragraph-size: calc(.75rem + (((100vw - 20rem) / (90 - 20))) * (1 - .75));
     margin: 0;
@@ -87,6 +87,7 @@
     position: relative;
     flex: 2;
     max-height: 60vh;
+    min-height: 370px;
 }
 
 .slide {
@@ -186,6 +187,7 @@
     display: flex;
     flex: 1;
     max-height: 40vh;
+    min-height: 250px;
 }
 
 .wrapper--article {
@@ -244,8 +246,8 @@
     }
 
     .slider {
-        flex-direction: column;
-        flex: 1;
+        min-height: unset;
+        max-height: unset;
     }
 
     .slide {
@@ -343,5 +345,12 @@
         background: url('./../icons/icon-hamburger.svg') no-repeat no-repeat center;
         height: 14px;
         width: 20px;
+    }
+}
+@media (max-height: 800px) and (min-width: 768px) {
+    .body {
+        --h2-size: 18px;
+        --h4-size: 16px;
+        --paragraph-size: 12px;
     }
 }
