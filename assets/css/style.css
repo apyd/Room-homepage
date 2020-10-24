@@ -106,6 +106,16 @@
 
 .slide--active {
     display: flex;
+    animation: showSlide .3s;
+}
+
+@keyframes showSlide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .wrapper--img {
