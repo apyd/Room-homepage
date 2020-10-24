@@ -67,12 +67,22 @@
 .nav__link:hover.nav__link::after {
     position: absolute;
     content: '';
-    width: 16px;
+    width: 18px;
     height: 2px;
     background-color: var(--white);
     bottom: -50%;
     left: 50%;
     transform: translateX(-50%);
+    animation: linkHover .3s 
+}
+
+@keyframes linkHover {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 18px;
+    }
 }
 
 .main {
@@ -145,6 +155,7 @@
     display: inline-block;
     font-size: var(--paragraph-size);
     padding-right: 25px;
+    transition: color .3s;
 }
 
 .slider__link:hover {
@@ -168,6 +179,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     margin: 0;
+    transition: background-color .3s;
 }
 
 .btn:hover {
@@ -280,6 +292,7 @@
 
     .header--active {
         background-color: var(--white);
+        transition: background-color .4s;
     }
 
     .header--active .btn--burger {
