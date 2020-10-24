@@ -19,7 +19,7 @@
     --very-dark-grey: hsl(0, 0%, 27%);
     --h2-size: calc(1.125rem + (((100vw - 20rem) / (90 - 20))) * (2.25 - 1.125));
     --h4-size: calc(1rem + (((100vw - 20rem) / (90 - 20))) * (1.2 - 1));
-    --paragraph-size: calc(.75rem + (((100vw - 20rem) / (90 - 20))) * (1.125 - .75));
+    --paragraph-size: calc(.75rem + (((100vw - 20rem) / (90 - 20))) * (1 - .75));
     margin: 0;
     padding: 0;
 }
@@ -127,7 +127,7 @@
     color: var(--dark-gray);
     font-size: var(--paragraph-size);
     margin: 0;
-    line-height: calc(1.1 * var(--paragraph-size));
+    line-height: calc(1.5 * var(--paragraph-size));
 }
 
 .slider__link {
