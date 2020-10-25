@@ -269,6 +269,10 @@
         padding: 20px 0;
     }
 
+    .main {
+        height: 100%;
+    }
+
     .slider {
         min-height: unset;
         max-height: unset;
@@ -332,6 +336,11 @@
         width: 100vw;
         z-index: 998;
         opacity: .3;
+    }
+
+    .section-about {
+        max-height: unset;
+        min-height: unset;
     }
 }
 
