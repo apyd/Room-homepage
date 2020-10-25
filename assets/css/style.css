@@ -154,14 +154,13 @@
 }
 
 .slider__link {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     text-decoration: none;
     color: var(--black);
     text-transform: uppercase;
     letter-spacing: 8px;
     margin-top: 20px;
-    }
+}
 
 .link__text {
     display: inline-block;
