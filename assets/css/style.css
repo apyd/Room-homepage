@@ -160,20 +160,21 @@
     text-transform: uppercase;
     letter-spacing: 8px;
     margin-top: 20px;
+    transition: filter .3s;
+    -webkit-transition: .3s -webkit-filter;
+    -moz-transition: .3s -moz-filter;
+    -moz-transition: .3s filter;
+    -ms-transition: .3s -ms-filter;
+    -o-transition: .3s -o-filter;
 }
 
 .link__text {
     display: inline-block;
     font-size: var(--paragraph-size);
     padding-right: 25px;
-    transition: color .3s;
 }
 
 .slider__link:hover {
-    color: var(--dark-gray);
-}
-
-.slider__link:hover .link__icon {
     filter: brightness(0) saturate(100%) invert(72%) sepia(14%) saturate(0%) hue-rotate(147deg) brightness(90%) contrast(79%);
 }
 .wrapper--btns {
