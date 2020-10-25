@@ -9,7 +9,7 @@ let numberOfSlides = slides.length - 1;
 
 function changeSlide(activeSlideIndex) {
     slides.forEach((slide, index) => {
-        index === activeSlideIndex ? slides[index].classList.add('slide--active') : slides[index].classList.remove('slide--active');
+        index === activeSlideIndex ? setTimeout(function() { slides[index].classList.add('slide--active');},100) : slides[index].classList.remove('slide--active');
     })
 }
 
