@@ -111,7 +111,7 @@
     overflow-x: hidden;
 }
 
-.slide--active .wrapper--img {
+.slide--active .wrapper--img .img {
     animation: showImg 1s;
     -webkit-animation: showImg 1s;
 }
@@ -123,7 +123,7 @@
 
 @keyframes showImg {
     0% {
-        filter: blur(20px)
+        filter: blur(10px)
     }
     100% {
         filter: blur(0px);
