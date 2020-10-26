@@ -112,8 +112,8 @@
 }
 
 .slide--active .wrapper--img {
-    animation: showImg .4s;
-    -webkit-animation: showImg .4s;
+    animation: showImg 1s;
+    -webkit-animation: showImg 1s;
 }
 
 .slide--active .wrapper--slider-text {
@@ -123,10 +123,10 @@
 
 @keyframes showImg {
     0% {
-        opacity: .7;
+        filter: blur(20px)
     }
     100% {
-        opacity: 1;
+        filter: blur(0px);
     }
 }
 
